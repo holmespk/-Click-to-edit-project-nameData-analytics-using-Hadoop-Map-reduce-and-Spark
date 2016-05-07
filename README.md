@@ -77,54 +77,31 @@ Please use Map side join technique to answer this problem.
 Hint: Please load all data in business.csv file into the distributed cache. 
 
 Sample output
-                                                   
-	       
+                                                  
 User id                      stars
 0WaCdhr3aXb0G0niwTMGTg       4.0
 
 Spark Exercise 
 
-Q1. Given input address (any part of the address e.g., city or state), find all
-the business ids located at the address. You must take the input address in the
-command line. [For example, if the input address is Stanford then you need to
-find all businesses with stanford in the address column] [You only need
-business.csv file to get the answer.]
+Q1. Given input address (any part of the address e.g., city or state), find all the business ids located at the address. You must take the input address in the command line. [For example, if the input address is Stanford then you need to find all businesses with stanford in the address column] [You only need business.csv file to get the answer.]
 
 Q2.
 a. Start spark-shell in local mode using all the processor cores on your
-system or the cluster. (Very important)List the business_id of the Top 10 businesses using the average ratings. This
-will require you to use review.csv. Please answer the question by calculating the
-average ratings given to each business using the review.csv file. Next, sort the
-output based on the business_id before taking the top 10 businesses using the
-average ratings.
-b. Rerun Q2a using Yarn mode. Please solve using our cs6360 cluster. This
-questions shows how spark can be used on multiple systems in a cluster.
-Load all the dataset to hadoop cluster as you did in homework1.
-Use the address of the file on the cluster as input to your scala script.
-Start spark-shell in YARN mode using Cs6360 spark cluster.
-This spark cluster consist 6 hadoop machine nodes. Using the following
-parameters Rerun your scala script from question 2a.
-Set executor memory =2G
-executor cores = 6.
-num-executors = 6
+system or the cluster. (Very important)List the business_id of the Top 10 businesses using the average ratings. This will require you to use review.csv. Please answer the question by calculating the average ratings given to each business using the review.csv file. Next, sort the output based on the business_id before taking the top 10 businesses using the average ratings.
+
+b. Rerun Q2a using Yarn mode. Please solve using our cs6360 cluster. This questions shows how spark can be used on multiple systems in a cluster. Load all the dataset to hadoop cluster as you did in homework1. Use the address of the file on the cluster as input to your scala script.Start spark-shell in YARN mode using Cs6360 spark cluster. This spark cluster consist 6 hadoop machine nodes. Using the following parameters Rerun your scala script from question 2a. Set executor memory =2G
+executor cores = 6. num-executors = 6
+
 For example, the command is as follows.
-spark-shell --master yarn-client --executor-memory 4G --executor-cores 7 --num-
-executors 6
-Please measure the execution time of your program using the local mode
-(Q2a )and yarn mode (Q2b). Please compare the measured time.
+spark-shell --master yarn-client --executor-memory 4G --executor-cores 7 --num- executors 6
+Please measure the execution time of your program using the local mode (Q2a )and yarn mode (Q2b). Please compare the measured time.
 Note: Spark supports only scala or java in YARN mode.
 
 Q3a:
-List the business_id , full address and categories of the Top 10
-businesses using the average ratings.
-Use the files business.csv and review.csv.
-Please sort the output based on the business_id before taking the top 10 business
+List the business_id , full address and categories of the Top 10 businesses using the average ratings. Use the files business.csv and review.csv. Please sort the output based on the business_id before taking the top 10 business
 using the average ratings.
 
 Q3b:
 Using broadcast variable in spark to store the business data, re implement
-your solution to question 3a.
-Please measure the execution time of your program when using spark RDD
-(Q3a )and when using Broadcast variable (Q3b). Please compare the
-measured time.
+your solution to question 3a. Please measure the execution time of your program when using spark RDD(Q3a )and when using Broadcast variable (Q3b). Please compare the measured time.
 
