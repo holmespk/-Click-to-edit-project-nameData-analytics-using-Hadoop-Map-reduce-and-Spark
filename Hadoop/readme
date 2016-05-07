@@ -1,0 +1,23 @@
+Name - Pavan Kulkarni
+net id - pxk142330
+
+The package consists of the following Directories
+
+1. code - contains all the source code for the homework
+2. jars - contains all the jar files
+3. output - consists of all the output files for the 4 required problems
+4. readme - compiling and running instructions
+
+
+Commands to run jar files 
+
+1. hadoop jar Problem1.jar com.HW1.Problem1.Problem1Driver /yelpdatafall/business/business.csv output_1
+2. hadoop jar Problem2.jar com.HW1.Problem2.Problem2Driver /yelpdatafall/review/review.csv output_2
+3. hadoop jar Problem3.jar com.HW1.Problem3.Problem3Driver /yelpdatafall/review/review.csv /yelpdatafall/business/business.csv inner output_3
+4. hadoop jar Problem4.jar com.HW1.Problem4.Problem4Driver /yelpdatafall/review/review.csv output_4
+
+Note : To see the out put cat the contents of the output_1,output_2,output_3,output_4
+
+The command for the same is hdfs dfs -cat output_1/* , follow same for others also
+
+Note : For problem 3 i have used :: as delimiter so that it is more readable
